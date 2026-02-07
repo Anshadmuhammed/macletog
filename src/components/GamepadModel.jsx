@@ -22,7 +22,7 @@ export default function GamepadModel() {
     useEffect(() => {
         if (modelRef.current) {
             // Initial position - Responsive centering
-            const baseX = isMobile ? -0.8 : 0; // Shift left on mobile to center visually
+            const baseX = 0; // Center on all screens now that height is fixed
             modelRef.current.position.set(baseX, 0, 0);
             // Initial rotation
             modelRef.current.rotation.set(0.2, -0.5, 0);
@@ -58,7 +58,7 @@ export default function GamepadModel() {
 
         // Target Positions (Restricted to X-axis only)
         // Small horizontal parallax with Responsive Base Offset
-        const baseX = isMobile ? -0.8 : 0; // Maintain offset during parallax
+        const baseX = 0; // Center on all screens
         const targetPosX = baseX + (mouseX * posIntensity);
 
         // Damping / Smoothing factor

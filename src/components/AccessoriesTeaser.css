@@ -127,7 +127,8 @@
 
     .teaser-visual {
         margin-top: 3rem;
-        height: 200px;
+        height: 400px;
+        /* Increased height to show full joystick size */
         width: 100%;
     }
 
